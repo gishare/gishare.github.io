@@ -71,9 +71,9 @@
           
           if (len < 14) {  
             alert('您只输入了 ' + len + ' 位，请输入 14-15 位代码');  
-            figure.innerHTML = '';  
-            a1value.innerHTML = '';  
-            TrueorFalse.innerHTML = '';  
+            figure.innerHTML = '&nbsp;';  
+            a1value.innerHTML = '&nbsp;';  
+            TrueorFalse.innerHTML = '&nbsp;';  
           } else {  
             if (len === 14) {  
               var numberlen = len;  
@@ -119,7 +119,7 @@
 </head>
 
 <div>
-    输入14或15位主体代码&nbsp;&nbsp;<br>
+    <p>输入14或15位主体代码&nbsp;&nbsp;</p>
     <input id="value" type="text" name="ANumber" maxlength="15">
     <button class="search" type="button" onclick="Count()">校&nbsp;&nbsp;&nbsp;&nbsp;验</button>
 </div>
@@ -132,7 +132,7 @@
 <div style="text-align:center;" id="TrueorFalse">&nbsp;</div>
 <br>
 <div style="text-align:center;color:black" id="TrueorFalse">
-	<img style="width:600px" src="image.svg">
+	<img style="width:700px" src="image.svg">
 </div>
 
 </html>
