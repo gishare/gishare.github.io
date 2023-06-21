@@ -1,1 +1,0 @@
-# gishare.github.io
