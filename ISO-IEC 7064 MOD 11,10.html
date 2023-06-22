@@ -100,6 +100,11 @@
             }  
           
             var a1 = 11 - s;  
+			if (a1===10){
+				var a1 = 0;
+			}else{
+				var a1 = a1;
+			}
             figure.innerHTML = '您输入的代码位数： <span style="color:red;">'+len+'</span>';  
             a1value.innerHTML = '第 15 位校验码计算结果： <span style="color:red;">' + a1 + '</span>';  
             if (number[14]) {  
