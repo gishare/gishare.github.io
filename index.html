@@ -2,142 +2,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>校验码系统ISO/IEC 7064 MOD11,10</title>
+    <title>Hellp World</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <style>
-        div {
-            text-align: center;
-            margin: 10px;
-            font-size: 24px;
-            font-weight: bold;
-            color: #009ad6;
-        }
-        input {
-            width: 250px;
-            height: 42px;
-            border: 3px solid #009ad6;
-            border-radius: 8px;
-            outline: none;
-            font-size: 20px;
-            color: red;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .search {
-            width: 120px;
-            height: 42px;
-            border: 3px solid #009ad6;
-            border-radius: 8px;
-            outline: none;
-            background: #009ad6;
-            font-weight: bold;
-            color: #fff;
-            font-size: 18px;
-        }
-
-        @media (max-device-width:1080px) {
-            div {
-                font-size: 44px;
-            }
-
-            input {
-                margin: 1% 0% 1% 2%;
-                border-radius: 16px;
-                float: left;
-                width: 96%;
-                height: 88px;
-                font-size: 44px;
-                font-weight: bold;
-            }
-
-            .search {
-                margin: 0% 0% 3% 2%;
-                border-radius: 16px;
-                float: left;
-                width: 96%;
-                height: 88px;
-                font-size: 44px;
-                font-weight: bold;
-            }
-        }
     </style>
     <script>
-        function Count() {  
-          var figure = document.getElementById("figure");  
-          var number = document.getElementById('value').value;  
-          var TrueorFalse = document.getElementById("TrueorFalse");  
-          var len = number.length;  
-          
-          if (len < 14) {  
-            alert('您只输入了 ' + len + ' 位，请输入 14-15 位代码');  
-            figure.innerHTML = '&nbsp;';  
-            a1value.innerHTML = '&nbsp;';  
-            TrueorFalse.innerHTML = '&nbsp;';  
-          } else {  
-            if (len === 14) {  
-              var numberlen = len;  
-            } else {  
-              var numberlen = len - 1;  
-            }  
-          
-            for (let i = 0; i < numberlen; i++) {  
-              var a = parseInt(number[i]);  
-              if (i === 0) {  
-                var f = (a + 10) % 10;  
-              } else {  
-                var f = (a + s) % 10;  
-              }  
-          
-              if (f === 0) {  
-                f = 10 * 2;  
-              } else {  
-                f = f * 2;  
-              }  
-          
-              var s = f % 11;  
-              console.log(a, f, s);  
-            }  
-          
-            var a1 = 11 - s;  
-			if (a1===10){
-				var a1 = 0;
-			}else{
-				var a1 = a1;
-			}
-            figure.innerHTML = '您输入的代码位数： <span style="color:red;">'+len+'</span>';  
-            a1value.innerHTML = '第 15 位校验码计算结果： <span style="color:red;">' + a1 + '</span>';  
-            if (number[14]) {  
-              if (parseInt(number[14]) === a1) {  
-                TrueorFalse.innerHTML = '第 15 位校验码<span style="color:red;">符合</span>标准';  
-              } else if (parseInt(number[14]) !== a1) {  
-                TrueorFalse.innerHTML = '第 15 位校验码<span style="color:red;">不符合</span>标准';  
-              }  
-            } else {  
-              TrueorFalse.innerHTML = '';  
-            }  
-          
-            console.log(a1, parseInt(number[14]));  
-          }  
-        }
-    </script>
 </head>
 
 <div>
-    <p>输入14或15位主体代码&nbsp;&nbsp;</p>
-    <input id="value" type="text" name="ANumber" maxlength="15">
-    <button class="search" type="button" onclick="Count()">校&nbsp;&nbsp;&nbsp;&nbsp;验</button>
+    <p>Hello World</p>
+   
 </div>
-<br>
-<br>
-<div style="text-align:center;" id="figure">&nbsp;</div>
-<br>
-<div style="text-align:center;" id="a1value" placeholder="">&nbsp;</div>
-<br>
-<div style="text-align:center;" id="TrueorFalse">&nbsp;</div>
-<br>
-<div style="text-align:center;color:black" id="TrueorFalse">
-	<img style="width:700px" src="image.svg">
-</div>
+
 
 </html>
